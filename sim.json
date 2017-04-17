@@ -1,25 +1,28 @@
 {
   "dsn": "dzdz/oracle@DZDZ_DEV_4300",
+  "parallel" : "8",
   "tasks": [
     {
       "name": "fpxx.01",
       "enable": "true",
-      "sql_sched": "select * from dzdz_sjcj.dzdz_sjcj_kzxx where xx is null",
-      "sql_detail": "use.perl.org",
+      "sql_sched": "select tslsh from dzdz_sjcj.dzdz_sjcj_kzxx where xx is null",
+      "sql_detail": "select col1, col2 from dzdz_sjcj.dzdz_fpxx_zzsfp where tslsh = :tslsh ",
       "field_mapping": [
-        "a:a1",
-        "b:b1"
+        "col1:f1",
+        "col2:f2"
       ]
     },
     {
-      "name": "fpxx.01",
+      "name": "hwxx.01",
       "enable": "true",
-      "sql_sched": "select * from dzdz_sjcj.dzdz_sjcj_kzxx where xx is null",
-      "sql_detail": "use.perl.org",
+      "sql_sched": "select tslsh from dzdz_sjcj.dzdz_sjcj_kzxx where xx is null",
+      "sql_detail": "select col1, col2 from dzdz_sjcj.dzdz_fpxx_zzsfp where tslsh = :tslsh ",
       "field_mapping": [
-        "a:a1",
-        "b:b1"
+        "col1:f1",
+        "col2:f2"
       ]
     }
   ]
 }
+
+// producer 票货肯定是分开的，这取决于源端业务系统
